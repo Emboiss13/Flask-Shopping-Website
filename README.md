@@ -5,21 +5,21 @@ This Flask web application serves as a basic template for building a web applica
 
 
 Features
-- Flask Framework
+- **Flask Framework:** 
   The application is built using the Flask micro-framework, providing a lightweight and modular structure for web development.
 
-- SQLAlchemy Integration
+- **SQLAlchemy Integration:** 
   Utilizes the SQLAlchemy library for easy and efficient database operations.
   The default database is SQLite, and you can modify the DB_NAME variable in the script to change the database file name.
 
-- User Authentication
+- **User Authentication:** 
   Implements user authentication with the help of the Flask-Login extension.
   The application provides login and registration functionality.
 
-- Blueprint Structure
+- **Blueprint Structure:** 
   Organizes the application into two blueprints: views for general views and auth for authentication-related views.
 
-- Database Creation
+- **Database Creation:** 
   Includes a function (create_database) to create the database if it does not exist.
 
 
