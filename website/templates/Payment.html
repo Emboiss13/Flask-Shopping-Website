@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="{{url_for('static', filename='Payment_Style.css')}}">
+    </head>
+    <body>
+        <header>
+
+            <div class="banner">
+                <div class="navbar">
+                  <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+                  <ul>
+                    <li><a href="{{url_for('views.home')}}">Home</a></li>
+                    <li><a href="{{url_for('views.about')}}">About</a></li>
+                    <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                    <li><a href="{{url_for('views.contact')}}">Contact</a></li>
+                    <li><a href="{{url_for('auth.login')}}">Login</a></li>
+                  </ul>
+                  <div class="navbar_icons">
+                    <div class="shopping">
+                        <ul>
+                            <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                            
+                        </ul>
+                    </div> 
+                  </div>
+                </div>
+
+
+                <div class="white-box-cart">
+
+                    <section class="container content-section">
+                        <h2 class="section-header">Payment</h2>
+            
+                        <form action="">
+                            <label for="country">Country
+                                <select name="country" id="country">
+                                    <option value="England">England</option>
+                                    <option value="Wales">Wales</option>
+                                </select>
+                            </label>
+
+                            <label for="cardno">Card Number
+                                <input type="text" name="carno" id="cardno" maxlength="19" onkeypress="cardspace()"/>
+                            </label>
+
+                            <label for="adress">Adress
+                                <input type="text" name="adress" id="adress" maxlength="50" />
+                            </label>
+
+                            <label for="email">Email
+                                <input type="email" name="email" id="email" maxlength="30" />
+                            </label>
+                            
+                            <div class="float">
+                                <label for="validtill">Valid Date
+                                    <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()"/>
+                                </label>
+
+                                <label for="cvv"> CVV
+                                    <input type="text" name="cvv" id="cvv" maxlength="3"/>
+                                </label>
+                            </div>
+
+                                <label for="checkbox">Payment adress is the same as Delivery address
+                                    <input type="checkbox" name="checkbox" id="checkbox"/>
+                                </label>
+
+                        </form>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">£{{total_price}}</span>
+                        </div>
+                        <a href="{{url_for('auth.Purchase_Completed')}}" style="text-decoration: none"><button class="btn btn-primary btn-purchase" type="button" >CONFIRM PURCHASE</button></a>
+                    </section>
+
+                    
+
+                </div>
+
+                <div id="container">
+                    <div id="main">
+    
+                    </div>
+                </div>
+    
+                <footer id="footer">
+                  <div class="footer_content">
+                    
+                    <a href="https://www.youtube.com/watch?v=ZCBdne4siKc"><i class="fa-brands fa-square-youtube fa-2x" style="color: black"></i></a>
+                    <a href="https://www.instagram.com/danielleguizio/"><i class="fa-brands fa-square-instagram fa-2x" style="color: black""></i></a>
+                    <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/"><i class="fa-brands fa-square-facebook fa-2x" style="color: black""></i></a>
+                    <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ"><i class="fa-brands fa-square-twitter fa-2x" style="color: black""></i></a>
+                  </div>
+                </footer>
+
+                
+            </div>
+        </header>
+
+        <script src="{{ url_for('static', filename='Pay.js')}}"></script>
+
+    </body>
+</html>

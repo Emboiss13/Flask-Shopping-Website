@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %} Home {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{url_for('static', filename='Auth_Base.style.css')}}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+
+
+
+    </head>
+    <body>
+        <header>
+            <div class="banner">
+
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if
+                    messages %} {% for category, message in messages %} {% if category ==
+                    'error' %}
+                    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                      {{ message }}
+                      <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-success alter-dismissable fade show" role="alert">
+                      {{ message }}
+                      <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+
+
+                <div class="navbar">
+                <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+                <ul>
+                    <li><a href="{{url_for('views.home')}}">Home</a></li>
+                    <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                    <li><a href="{{url_for('auth.sign_up')}}">Sign Up</a></li>
+                    <li><a href="{{url_for('auth.logout')}}">Logout</a></li>
+                    <li><a href="{{url_for('auth.login')}}">Login</a></li>
+                </ul>
+                <div class="navbar_icons">
+                  <div class="shopping">
+                      <ul>
+                          <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                          
+                      </ul>
+                  </div> 
+                </div>
+
+                
+
+                <div class="container_centered">
+                    
+                    {% block content %}{% endblock %}
+                    
+                </div>
+
+            </div>
+
+            <div id="container">
+                <div id="main"></div>
+            </div>
+
+            <footer id="footer">
+              <div class="footer_content">
+                <a href="https://www.youtube.com/watch?v=ZCBdne4siKc"><i class="fa-brands fa-square-youtube fa-2x" style="color: black"></i></a>
+                <a href="https://www.instagram.com/danielleguizio/"><i class="fa-brands fa-square-instagram fa-2x" style="color: black""></i></a>
+                <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/"><i class="fa-brands fa-square-facebook fa-2x" style="color: black""></i></a>
+                <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ"><i class="fa-brands fa-square-twitter fa-2x" style="color: black""></i></a>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+        </header>
+        
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+        ></script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+        ></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+        ></script>   
+    </body>
+</html>

@@ -1,0 +1,342 @@
+/* Creating font styling for the whole website*/ 
+p{
+    font-size: 15px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: medium;
+}
+  
+@font-face {
+    src:url(Fonts/TAN-Rosebud.otf);
+    font-family: 'TAN Rosebud';
+}
+  
+.Title{
+    font-size: 80px;
+    line-height: 62px;
+    font-family: 'TAN Rosebud';
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+/* Setting global margins for the page*/ 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+    
+/* Setting background colour for the page (inside the body of my html)*/ 
+body{
+    background-color: rgb(255, 255, 255);
+}
+    
+  
+/* HOME PAGE - Main divisions within body and formating */ 
+.banner{
+    width: float;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(about-background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+  
+/* Navbar - CSS*/ 
+  .navbar{
+    width: 85%;
+    margin-left: 10%;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.logo{
+    width: 160px;
+    margin-right:50px;
+    margin-left: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+    
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+    
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+    
+.navbar ul li:hover::after{
+    width: 100%;
+}
+    
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+  
+}
+  
+/* Navbar ICONS- CSS*/ 
+.navbar_icons{
+    width: 70% 100%;
+    margin:0px;
+    padding: 0px 0;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+/* Product and shopping section*/
+.section-p1 {
+    padding: 40px 80px;
+    width: 100%;
+    height: 800px;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px;
+    padding: 0 6em;
+    align-items: center;
+}
+
+.section-header {
+    font-family: 'TAN Rosebud';
+    font-weight: normal;
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+
+.btn-primary {
+    align-items: center;
+    margin: 0px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5 px;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    justify-content: left;
+    max-width: 100%;
+    min-width: 100px;
+    max-height: 100%;
+    min-height: 30px;
+    padding: 10px;
+    text-decoration: none;
+    user-select: contain;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    background-image: linear-gradient(90deg, #ce24f8 0%, #09ffca 100%);
+}
+
+.btn-primary:hover{
+    color: #ffffff;
+}
+
+.white-box-cart{
+    max-width: 820px;
+    max-height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 600;
+    overflow: hidden;
+    padding-bottom: 200px;
+    margin-top: 5%;
+    resize: vertical;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: float;
+    height: fit-content;
+}
+
+
+
+/*Payment */
+.cart-total {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.navbar_icons .shopping span{
+    background-color: #20E2D7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 6px;
+    font-size: 10px;
+    
+}
+
+form label{
+    position: relative;
+    font-size: 11px;
+    font-weight: 600;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+form select{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+form #cardno{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+form #adress{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    font-size: 16px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+form #email{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    font-size: 16px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.float{
+    display: flex;
+}
+
+#validtill, #cvv{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+  
+  
+/* FOOTER - Social media links CSS*/ 
+#container{
+    min-height: 40%;
+}
+
+#main{
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.footer_content{
+    align-items: left;
+    margin: 20px;
+    width: auto;
+    display: inline-block;
+    padding-left: 80%;
+}
+
+#footer{
+    background-color: #ffffff;
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear:both;
+    color: #000000;
+}

@@ -1,0 +1,10 @@
+{% extends 'Shop-Final.html' %}
+{% from 'product.html' import product_design %}
+
+{% block content %}
+
+{% for i in product %}
+{{ product_design(i) }}
+{% endfor %}
+
+{% endblock %}

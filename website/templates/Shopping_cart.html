@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="{{url_for('static', filename='ShoppingCart.Style.css')}}">
+    </head>
+    <body>
+        <header>
+
+            <div class="banner">
+                <div class="navbar">
+                  <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+                  <ul>
+                    <li><a href="{{url_for('views.home')}}">Home</a></li>
+                    <li><a href="{{url_for('views.about')}}">About</a></li>
+                    <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                    <li><a href="{{url_for('views.contact')}}">Contact</a></li>
+                    <li><a href="{{url_for('auth.login')}}">Login</a></li>
+                  </ul>
+                  <div class="navbar_icons">
+                    <div class="shopping">
+                        <ul>
+                            <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                            
+                        </ul>
+                    </div> 
+                  </div>
+                </div>
+
+
+                <div class="white-box-cart">
+
+                    <section class="container content-section">
+                        <h2 class="section-header">CART</h2>
+                        <div class="cart-row">
+                            <br>
+
+                            <section>
+                                <table> 
+                                    <tr>
+                                        <th><span class="cart-item cart-header cart-column">IMAGE</span></th>
+                                        <th><span class="cart-item cart-header cart-column">ITEM</span></th>
+                                        <th><span class="cart-price cart-header cart-column">PRICE</span></th>
+                                        <th><span class="cart-price cart-header cart-column">REMOVE</span></th>
+                                    </tr>
+
+                                    <ul>
+                                        {% for product in cart_items %}
+                                        <tr>
+                                            <td><img class="cart-img" src="{{url_for('static', filename='images/Shop_Products/' + product.image_path)}}" alt=""></td>
+                                            <td>{{product.product_name}}</td>
+                                            <td>£{{product.price}}</td>
+                                            <td>
+                                                <form action="/Shopping-cart" method="POST">
+                                                    <!-- <input type="hidden" name={{product.id}} value={{product.product_name}}> -->
+                                                    <input type="hidden" name="delete" value="{{product.id}}" />
+                                                    <button type="submit"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #20E2D7"></i></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </ul>
+                                </table>
+                                
+                            </section>
+                            
+                            
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Total</strong>
+                                <span class="cart-total-price">£{{total_price}}</span>
+                            </div>
+                            <a href="{{url_for('auth.Payment')}}" style="text-decoration: none"><button class="btn btn-primary btn-purchase" type="button" >PAYMENT</button></a>
+                        </div>
+                        </section>
+
+                    
+
+                </div>
+
+                <div id="container">
+                    <div id="main">
+    
+                    </div>
+                </div>
+    
+                <footer id="footer">
+                  <div class="footer_content">
+                    
+                    <a href="https://www.youtube.com/watch?v=ZCBdne4siKc"><i class="fa-brands fa-square-youtube fa-2x" style="color: black"></i></a>
+                    <a href="https://www.instagram.com/danielleguizio/"><i class="fa-brands fa-square-instagram fa-2x" style="color: black""></i></a>
+                    <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/"><i class="fa-brands fa-square-facebook fa-2x" style="color: black""></i></a>
+                    <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ"><i class="fa-brands fa-square-twitter fa-2x" style="color: black""></i></a>
+                  </div>
+                </footer>
+
+                
+            </div>
+        </header>
+    </body>
+</html>

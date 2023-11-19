@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Thanks for Contacting Us</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="{{url_for('static', filename='Thanks_Contact.css')}}">
+    </head>
+    <body>
+      <header>
+        <div class="banner">
+            <div class="navbar">
+              <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+              <ul>
+                <li><a href="{{url_for('views.home')}}">Home</a></li>
+                <li><a href="{{url_for('views.about')}}">About</a></li>
+                <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                <li><a href="{{url_for('views.contact')}}">Contact</a></li>
+                <li><a href="{{url_for('auth.login')}}">Login</a></li>
+              </ul>
+              <div class="navbar_icons">
+                <div class="shopping">
+                    <ul>
+                        <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                        
+                    </ul>
+                </div> 
+              </div>
+            </div>
+
+            <div class="container_centered">
+                <div class="textbox">
+                    <div class="Contact-text">
+                        <h3 class="Title">Thank You</h3>
+                        <br>
+                        <h3 class="Sub-Title">For contacting us</h3>
+                        <br>
+                        <p class="paragraph">We will get back to you as soon as possible, a reply can take between 2-5 working days!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="container">
+                <div id="main">
+
+                </div>
+            </div>
+        </header>
+
+            <footer id="footer">
+              <div class="footer_content">
+                <a href="https://www.youtube.com/watch?v=ZCBdne4siKc"><i class="fa-brands fa-square-youtube fa-2x" style="color: black"></i></a>
+                <a href="https://www.instagram.com/danielleguizio/"><i class="fa-brands fa-square-instagram fa-2x" style="color: black""></i></a>
+                <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/"><i class="fa-brands fa-square-facebook fa-2x" style="color: black""></i></a>
+                <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ"><i class="fa-brands fa-square-twitter fa-2x" style="color: black""></i></a>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </header>
+    </body>
+  </html>

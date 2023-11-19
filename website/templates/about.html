@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About - Our brand</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <link rel="stylesheet" href="{{url_for('static', filename='About.style.css')}}"
+    </head>
+    <body>
+      <header>
+        <div class="banner">
+            <div class="navbar">
+              <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+              <ul>
+                <li><a href="{{url_for('views.home')}}">Home</a></li>
+                <li><a href="{{url_for('views.about')}}">About</a></li>
+                <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                <li><a href="{{url_for('views.contact')}}">Contact</a></li>
+                <li><a href="{{url_for('auth.login')}}">Login</a></li>
+              </ul>
+              <div class="navbar_icons">
+                <div class="shopping">
+                    <ul>
+                        <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                        
+                    </ul>
+                </div> 
+              </div>
+            </div>
+  
+            <div class="About-image">
+                <img src="{{ url_for('static', filename='images/About-Collage.png')}}" class="Collage">
+            </div>
+
+            <br>
+
+            <div class="About-text">
+                <h1 class="Title">About the brand</h1>
+                <p class="About-paragraph">Giuly's Studio presents itself as a reference point for fashion targeting this increasingly demanding public and, in just 2 years,  we have consolidated our brand image in 3 shops around Wales. We have been able to provide sustainable fashion in Cardiff, Bristol and Newport and look forward to opening our new store this summer in London, targeting a new market. We take great pride in offering high-quality and eco-friendly clothing options for our customers.</p>
+                
+                <div class="button_location">
+                    <a href="{{url_for('views.contact')}}">
+                        <button type="button" id="b1">CONTACT US</button>
+                    </a>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="Sub-Title">Target group</h2>
+                <hr class="Line">
+                <p class="About-paragraph">Our public is characterized by adventurous young people, who are aware of the latest trends and are interested in taking care of our environment for future generations. We believe we can change the world one heart, one purchase and one item at a time. </p>
+
+            </div>
+
+            <br>
+
+            <div id="container">
+
+                <div class="img-gallery">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img1.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img2.png')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img3.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img4.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img5.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img6.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img7.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img8.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img9.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img10.jpg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img11.jpeg')}}">
+                    <img src="{{ url_for('static', filename='images/About_Gallery/img12.jpeg')}}">
+                </div>
+
+                <div id="main">
+                </div>
+            </div>
+
+            <footer id="footer">
+            <div class="footer_content">
+                <a href="https://www.youtube.com/watch?v=ZCBdne4siKc"><i class="fa-brands fa-square-youtube fa-2x" style="color: black"></i></a>
+                <a href="https://www.instagram.com/danielleguizio/"><i class="fa-brands fa-square-instagram fa-2x" style="color: black""></i></a>
+                <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/"><i class="fa-brands fa-square-facebook fa-2x" style="color: black""></i></a>
+                <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ"><i class="fa-brands fa-square-twitter fa-2x" style="color: black""></i></a>
+            </div>
+            </footer>
+
+          </div>
+        </div>
+      </header>
+    </body>
+  </html>

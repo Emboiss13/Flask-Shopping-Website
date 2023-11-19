@@ -1,0 +1,459 @@
+/* Creating font styling for the whole website*/ 
+.paragraph{
+    font-size: 15px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: medium;
+}
+  
+@font-face {
+    src:url(Fonts/TAN-Rosebud.otf);
+    font-family: 'TAN Rosebud';
+}
+  
+.Title{
+    font-size: 80px;
+    line-height: 62px;
+    font-family: 'TAN Rosebud';
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+/* Setting global margins for the page*/ 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+    
+/* Setting background colour for the page (inside the body of my html)*/ 
+body{
+      background-color: rgb(255, 255, 255);
+}
+    
+  
+/* HOME PAGE - Main divisions within body and formating */ 
+.banner{
+    width: float;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(about-background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* About text*/
+.About-text{
+    max-width: 600px;
+    width: float;
+    padding-left: 55%;
+    padding-top: 10%;
+    margin: 10px;
+
+}
+
+.Sub-Title{
+    font-size: 40px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-top: 8px;
+}
+
+.Line{
+    width: 80px;
+    height: 3px;
+    border: 0 none; 
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    background-color: turquoise;
+}
+
+.About-paragraph{
+    font-size: 15px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+  
+/* Navbar - CSS*/ 
+  .navbar{
+    width: 85%;
+    margin-left: 10%;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.logo{
+    width: 160px;
+    margin-right:50px;
+    margin-left: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+    
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+    
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+    
+.navbar ul li:hover::after{
+    width: 100%;
+}
+    
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+  
+}
+  
+/* Navbar ICONS- CSS*/ 
+.navbar_icons{
+    width: 70% 100%;
+    margin:0px;
+    padding: 0px 0;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+/* Product and shopping section*/
+.section-p1 {
+    padding: 40px 80px;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #EEECDE;
+    border-radius: 25px;
+    background-color: #EEECDE;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 25px;
+    font-weight: 800;
+    color: #F36C99;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: #20E2D7;
+}
+
+#product1 .pro .cart button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#product1 .pro .cart i{
+    font-size: 20px;
+    text-align: center;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+
+/*Shopping Cart */
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.navbar_icons .shopping span{
+    background-color: #20E2D7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 6px;
+    font-size: 10px;
+    
+}
+
+
+.navbar_icons .shopping span{
+    background-color: #20E2D7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 6px;
+    font-size: 10px;
+    
+}
+
+  
+  
+/* FOOTER - Social media links CSS*/ 
+#container{
+    min-height: 20%;
+}
+
+#main{
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.footer_content{
+    align-items: left;
+    margin: 20px;
+    width: auto;
+    display: inline-block;
+    padding-left: 80%;
+}
+
+#footer{
+    background-color: #ffffff;
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear:both;
+    color: #000000;
+}
+
+
+  
+  
+  
+  

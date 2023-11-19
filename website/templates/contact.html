@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static', filename='Contact.style.css')}}"/>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  </head>
+  <body>
+    <header>
+        <div class="banner">
+            <div class="navbar">
+              <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo">
+              <ul>
+                <li><a href="{{url_for('views.home')}}">Home</a></li>
+                <li><a href="{{url_for('views.about')}}">About</a></li>
+                <li><a href="{{url_for('auth.shop')}}">Shop</a></li>
+                <li><a href="{{url_for('views.contact')}}">Contact</a></li>
+                <li><a href="{{url_for('auth.login')}}">Login</a></li>
+              </ul>
+              <div class="navbar_icons">
+                <div class="shopping">
+                    <ul>
+                        <li><a href="{{url_for('auth.Shopping_Cart')}}"><i class="fa-solid fa-bag-shopping fa-lg" style="color: black"></i><span class="quantity"><i class="fa-solid fa-exclamation"></i></span></a></li>
+                        
+                    </ul>
+                </div> 
+              </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            We would love to answer any of your questions or offer help with your purchase!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="{{ url_for('static', filename='images/img/location.png')}}" class="icon" alt="" />
+              <p>Jubilee, E Tyndall St, Cardiff CF24 5EF</p>
+            </div>
+            <div class="information">
+              <img src="{{ url_for('static', filename='images/img/email.png')}}" class="icon" alt="" />
+              <p>contact@giulyStudio.com</p>
+            </div>
+            <div class="information">
+              <img src="{{ url_for('static', filename='images/img/phone.png')}}" class="icon" alt="" />
+              <p>7877-456-0099</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/DANIELLEGUIZIOOfficial/">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/danielleguizio?fbclid=IwAR225qAib3wunzbLdhP7pgDn0c65C6YhU9Qahf73DmEu8CPcmagr_I8jEgQ">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/danielleguizio/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/bershka-fashionshops/">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="{{url_for('views.thanks_contact')}}" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='contact_form.js')}}"></script>
+  </body>
+</html>

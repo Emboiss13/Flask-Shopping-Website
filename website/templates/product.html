@@ -1,0 +1,29 @@
+{% macro product_design(product) %}
+
+<div class="pro">
+    <img class="shop-item-image" src="{{url_for('static', filename='images/Shop_Products/' + product.image_path)}}" alt="">
+    <div class="shop-items">
+        <div class="des">
+            <span><i class="fa-solid fa-dolly" style="color: black" ></i> {{product.carbon_footprint}} - tonnes of CO2e</span>
+            <span class="shop-item-title"><h5>{{product.product_name}}</h5></span>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="shop-item-details">
+                <span class="shop-item-price"><h4>£{{product.price}}</h4></span>
+                <div class="cart">
+                    <form action="/add_to_cart" method="POST">
+                        <!-- <input type="hidden" name={{product.id}} value={{product.product_name}}> -->
+                        <input type="hidden" name="product_id" value="{{product.id}}" />
+                        <button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #20E2D7"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
