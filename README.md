@@ -2,7 +2,12 @@
 On this project, I created a full-functioning shopping website for the brand Giuly's Studio, an Indie shopping store. I started with the brand's logo and identity for a homogenous design on the website. I then dove into the coding and used Flask, HTML, CSS, and JavaScript to bring my ideas to life. 
 
 This Flask web application serves as a basic template for building a web application using the Flask framework. It includes user authentication, database integration using SQLAlchemy, and a simple structure to get you started with web development.
+_________
 
+### Demo: 
+If you'd like to see how the website acts on a browser, check this video I made: https://youtu.be/BHLdDcs4ulE 
+
+_________
 
 ### 📄 __Init.py__ Features:
 - **Flask Framework:** 
@@ -93,7 +98,4 @@ HTML templates are stored in the templates folder and are rendered by the corres
 
 The static folder contains static assets (e.g., stylesheets, images) used by the HTML templates.
 
-_________
 
-### Demo: 
-If you'd like to see how the website acts on a browser, check this video I made: https://youtu.be/BHLdDcs4ulE 
